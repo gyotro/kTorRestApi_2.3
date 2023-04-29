@@ -13,6 +13,7 @@ fun Application.module() {
     install(CallLogging) {
         level = Level.INFO
     }
+    configureDefaultHeaders()
     configureSerialization()
     configureRouting()
 }
