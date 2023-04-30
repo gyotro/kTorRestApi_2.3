@@ -1,5 +1,6 @@
 package com.example.plugins
 
+import com.example.routes.root
 import io.ktor.server.routing.*
 import io.ktor.server.response.*
 import io.ktor.server.application.*
@@ -12,9 +13,10 @@ import kotlinx.html.title
 
 fun Application.configureRouting() {
     routing {
-        get("/") {
-            call.respondText("Hello World!")
-        }
+        // Real API routes for the application
+        root()
+
+        // Example routes
         get("/welcome") {
             val name = call.request.queryParameters["name"] ?: ""
             call.respondHtml{
