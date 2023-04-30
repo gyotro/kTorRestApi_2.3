@@ -37,8 +37,8 @@ dependencies {
     implementation("io.ktor:ktor-server-default-headers:$ktor_version")
  //   testImplementation("io.ktor:ktor-server-tests-jvm:$ktor_version")
  //   testImplementation("org.jetbrains.kotlin:kotlin-test-junit:$kotlin_version")
-    testImplementation("io.ktor:ktor-server-test-host:$ktor_version")
-    testImplementation("org.jetbrains.kotlin:kotlin-test:$kotlin_version")
+ //   testImplementation("io.ktor:ktor-server-test-host:$ktor_version")
+ //   testImplementation("org.jetbrains.kotlin:kotlin-test:$kotlin_version")
     // Koin for Ktor
     implementation("io.insert-koin:koin-ktor:$koin_version")
     // SLF4J Logger

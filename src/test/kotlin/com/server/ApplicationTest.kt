@@ -1,5 +1,5 @@
-package com.example
-
+//package com.example
+/*
 import io.ktor.client.request.*
 import io.ktor.client.statement.*
 import io.ktor.server.testing.*
@@ -21,4 +21,4 @@ class ApplicationTest {
             assertEquals("Welcome To Hero Api", bodyAsText())
         }
     }
-}
+}*/

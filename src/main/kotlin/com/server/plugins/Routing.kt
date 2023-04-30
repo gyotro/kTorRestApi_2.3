@@ -1,8 +1,8 @@
-package com.example.plugins
+package com.server.plugins
 
-import com.example.routes.root
+import com.server.routes.getAll
+import com.server.routes.root
 import io.ktor.server.routing.*
-import io.ktor.server.response.*
 import io.ktor.server.application.*
 import io.ktor.server.html.*
 import kotlinx.html.body
@@ -15,7 +15,7 @@ fun Application.configureRouting() {
     routing {
         // Real API routes for the application
         root()
-
+        getAll()
         // Example routes
         get("/welcome") {
             val name = call.request.queryParameters["name"] ?: ""

@@ -1,4 +1,4 @@
-package com.example.dao
+package com.server.dao
 
 import kotlinx.serialization.Serializable
 

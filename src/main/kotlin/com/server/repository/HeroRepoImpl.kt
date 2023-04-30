@@ -1,7 +1,7 @@
-package com.example.repository
+package com.server.repository
 
-import com.example.dao.ApiResponse
-import com.example.dao.Hero
+import com.server.dao.ApiResponse
+import com.server.dao.Hero
 
 const val NEXT_PAGE_KEY = "nextPage"
 const val PREVIOUS_PAGE_KEY = "prevPage"
