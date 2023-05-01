@@ -2,6 +2,7 @@ package com.server.plugins
 
 import com.server.routes.getAll
 import com.server.routes.root
+import com.server.routes.searchHeros
 import io.ktor.server.routing.*
 import io.ktor.server.application.*
 import io.ktor.server.html.*
@@ -16,6 +17,7 @@ fun Application.configureRouting() {
         // Real API routes for the application
         root()
         getAll()
+        searchHeros()
         // Example routes
         get("/welcome") {
             val name = call.request.queryParameters["name"] ?: ""

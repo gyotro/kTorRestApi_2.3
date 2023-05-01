@@ -14,6 +14,7 @@ fun Application.module() {
     install(CallLogging) {
         level = Level.INFO
     }
+    statusPages()
     configureKoin()
     configureDefaultHeaders()
     configureSerialization()
