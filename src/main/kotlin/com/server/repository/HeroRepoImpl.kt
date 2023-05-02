@@ -427,10 +427,10 @@ class HeroRepoImpl() : HeroRepo {
         return mapOf(PREVIOUS_PAGE_KEY to prevPage, NEXT_PAGE_KEY to nextPage)
     }
 
-    override suspend fun searchHeroes(name: String?) = ApiResponse(
+    override suspend fun searchHeroes(name: String) = ApiResponse(
             success = true,
             message = "ok",
-            heroes = this.findHeroes(name)
+            heroes = this.findHeroes_adv(name)
         )
 
     private fun findHeroes(query: String?): List<Hero> {
@@ -447,5 +447,11 @@ class HeroRepoImpl() : HeroRepo {
         } else {
             emptyList()
         }
+    }
+    private fun findHeroes_adv(query: String): List<Hero> {
+        val allHeroes = heroes
+            .values
+            .flatten()
+        return allHeroes.filter { it.name.lowercase().contains(query.lowercase()) }
     }
 }
