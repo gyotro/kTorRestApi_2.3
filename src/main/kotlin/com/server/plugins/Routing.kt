@@ -6,6 +6,7 @@ import com.server.routes.searchHeros
 import io.ktor.server.routing.*
 import io.ktor.server.application.*
 import io.ktor.server.html.*
+import io.ktor.server.http.content.*
 import kotlinx.html.body
 import kotlinx.html.h3
 import kotlinx.html.head
@@ -18,6 +19,7 @@ fun Application.configureRouting() {
         root()
         getAll()
         searchHeros()
+        staticResources(remotePath = "/images", basePackage = "images")
         // Example routes
         get("/welcome") {
             val name = call.request.queryParameters["name"] ?: ""

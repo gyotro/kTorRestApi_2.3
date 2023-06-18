@@ -430,7 +430,7 @@ class HeroRepoImpl() : HeroRepo {
     override suspend fun searchHeroes(name: String) = ApiResponse(
             success = true,
             message = "ok",
-            heroes = this.findHeroes_adv(name)
+            heroes = this.findheroesAdv(name)
         )
 
     private fun findHeroes(query: String?): List<Hero> {
@@ -448,7 +448,7 @@ class HeroRepoImpl() : HeroRepo {
             emptyList()
         }
     }
-    private fun findHeroes_adv(query: String): List<Hero> {
+    private fun findheroesAdv(query: String): List<Hero> {
         val allHeroes = heroes
             .values
             .flatten()
